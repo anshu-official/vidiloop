@@ -1,0 +1,482 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #5a5a5a;
+
+}
+img{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.navleft{
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    width: 45px;
+    height:40px;
+    margin-right:-10px
+}
+.icon{
+    width:75px;
+    height:75px;
+}
+nav{
+    padding:10px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0.0,0,0.2);
+    background-color: white;
+    position: sticky;
+    top:0;
+    z-index: 10;
+    height:65px;
+
+}
+.navright img{
+    width:30px;
+    height:30px;
+    margin-right:10px;
+    
+}
+.navmiddle{
+    margin-right:20px ;
+    display:flex;
+    align-items: center;
+    align-content: center;
+}
+.mic{
+    width:30px;
+    height:30px;
+    border-radius: 40px;
+    margin-left: -10px;;
+}
+.search{
+    margin-left: 5px;
+    width:25px;
+    height:25px;
+}
+.navmiddle .searchbox{
+    border:1px solid rgb(172, 169, 169);
+    margin-right: 15px;
+    padding: 9px 10px;
+    border-radius: 25px;
+    display:flex;
+    align-items:center;
+    align-content: center;
+
+
+}
+.navmiddle .searchbox input{
+    border:0;
+    outline: o;
+   background: transparent;
+   height:20px;
+
+
+}
+.navmiddle .searchbox img{
+    width:20px;
+    height: 20px;
+}
+/*sidebar*/
+.sidebar{
+    
+    background-color: white;
+    width:15%;
+    height:100vh;
+    position: fixed;
+    top:0;
+    padding-left: 2%;
+    padding-top: 80px;
+}
+.shortcutlinks a img{
+    width:15px;
+    margin-right: 10px;
+    height: 20px;
+
+}
+.shortcutlinks a{
+    display:flex;
+    align-items: center;
+    width: 25px;
+    margin-bottom: 15px;
+    width:fit-content;
+
+}
+.shortcutlinks {
+    display: flex;
+    flex-direction: column; /* Arrange shortcut links in a column */
+    align-items: flex-start; /* Align them to the left */
+    margin-top: 10px; /* Add space at the top */
+    
+}
+.shortcutlinks a p {
+    white-space: nowrap;
+    font-size: 10px;;
+}
+.subscribed-list h3 {
+    font-size: 10px; /* Adjust the font size as needed */
+    margin: 20px;
+    color: #5a5a5a;
+    margin-left:5px;
+}
+
+
+.subscribed-list a{
+    display:flex;
+    align-items: center;
+    width: 15px;
+    margin-bottom: 15px;
+    width:fit-content;
+    white-space: nowrap;
+    font-size: 12px;
+
+
+
+}
+
+.subscribed-list a img{
+    width:25px;
+    height:25px;
+    white-space: nowrap;
+    border-radius: 25px;
+    font-size: 5px;
+    padding-right:5px;;
+}
+.subscribed-list .harry{
+    margin-top:-5px ;
+}
+.sidebar.small-sidebar {
+    width: 5%;
+
+    /* Add any other necessary styles here */
+}
+.small-sidebar a p{
+    display:none;
+}
+.small-sidebar h3{
+    display: none;
+}
+/*main*/
+.container{
+    background: #f9f9f9;
+    padding-left: 17%;
+    padding-right: 2%;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.large-container{
+    padding-left:7%;
+}
+
+.banner{
+    width:100%;
+}
+.banner img{
+    width:100%;
+    border-radius:8px ;
+    height: 100%;
+}
+.list-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+   grid-row-gap:16px;
+    grid-column-gap:30px ;
+    margin-top: 15px;}
+.vidlist .thumbnail{
+    width:100%;
+    border-radius: 5%;
+    height:50%;
+}
+
+.vidlist .flex{
+    align-items:flex-start;
+    margin-top:7px ;
+
+}
+.vidlist .flex img{
+    width:35px;
+    margin-right:10px ;
+    border-radius:50%;
+    height:30px;
+}
+.vid-info{
+    color:#5a5a5a;
+    font-size: 13px;
+    display:block;
+    margin-bottom:5px;
+}
+@media (max-width:900px){
+    .logo{
+        display:none;
+    }
+    .sidebar{
+        display:none;
+    }
+    .container , .large-container{
+        padding-left: 5%;
+        padding-right:5%;
+    }
+    .navright img{
+        display:none;
+    }
+    .navright .user-icon{
+        display:block;
+        width:30px;
+    }
+    .navmiddle .searchbox input{
+        width:100px;
+    }
+
+    .navmiddle .mic{
+        display:none;
+    }
+    .icon{
+        width:90px;
+    }
+
+}
+/*----playvideo-----*/
+.play-container{
+   padding-left: 2%;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:;
+}
+.play-video{
+    flex-basis: 70%;
+}
+.rightsidebar{
+    flex-basis: 29%;
+}
+.video-container {
+    width: 100%; /* Set the width to 100% to make the video responsive */
+}
+
+/* If you want to target the video directly without a container class */
+.video-container video {
+    width: 100%; /* Set the width to 100% */
+}
+ .side-video-list{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+ }
+ .side-video-list img{
+    width:100%;
+    margin-right: 25px;
+    height: 66px;
+
+ }
+ .side-video-list .small-thumbnail{
+    flex-basis:45%;
+ }
+ .side-video-list .vid-info{
+    flex-basis: 52%;
+ }
+.play-video .tags a{
+    color:rgb(50, 50, 90);
+    font-size:13px ;
+}
+.play-video h3{
+    font: weight 400px;;
+    font-size: 18px;
+}
+.play-video .play-video-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size:14px;
+    color:#5a5a5a;
+    margin-left: 30px;
+
+}
+.play-video .play-video-info a img{
+    width:30px;
+    margin-right: 8px;
+    height:20px;
+
+}
+.play-video .play-video-info a{
+    display:inline-flex;
+    align-items: center;
+    margin-left:15px;
+}
+.play-video hr{
+    border:0;
+    height:1px;
+    background: #ccc;
+    margin:10px 0px;
+
+}
+.publisher{
+ display:flex;
+ align-items: center;
+ margin-top: 20px;
+}
+.publisher div{
+    flex:1;
+    line-height: 20px;
+}
+.publisher img{
+    width:40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.publisher div p{
+    color: #000;
+    font-weight:400;
+    font-size: 18px;
+}
+.publisher div span{
+    font-size: 13px;
+    color: #5a5a5a;
+}
+.publisher button{
+    background: red;
+    color: #fff;
+    padding:8px 30px;
+    border-radius: 4px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+
+
+}
+.vid-description{
+    padding-left: 55px;
+    margin:15px 0;
+}
+.vid-description p{
+    font-size:14px;
+    margin-bottom:15px;
+    color:#5a5a5a;
+}
+.vid-description h4{
+    font-size: 14px;
+    color:#5a5a5a;
+    margin-top:15px ;
+}
+.add-comment{
+    display:flex;
+    align-items: center;
+    margin:30px 0;
+}
+.add-comment img{
+    width:35px;
+    border-radius: 50%;
+    margin-right:15px;
+}
+.add-comment input{
+    border:0;
+    outline:0;
+    border-bottom:1px solid #ccc;
+    width:100%;
+    padding-top: 10px;
+    background: transparent;
+}
+.old-comment{
+    display:flex;
+    align-items: center;
+    margin:20px 0;
+}
+.old-comment img{
+    width:35px;
+    border-radius: 50%;
+    margin-right:15px;
+}
+.old-comment h3{
+    font-size: 14px;
+    margin-bottom: 2px;
+
+}
+.old-comment h3 span{
+    font-size: 12px;
+    color: #5a5a5a;
+    font-weight: 400;
+    margin-left:8px ;
+}
+.old-comment .comment-action{
+    display:flex;
+    align-items: center;
+    margin:8px 0;
+    font-size:14px;
+
+
+}
+.old-comment .comment-action img{
+    border-radius: 0;
+    width:20px;
+    height:20px;
+     
+}
+.old-comment .comment-action span{
+    margin-right: 20px;
+    color:#5a5a5a;
+}
+.old-comment .comment-action a{
+    color:rgb(29, 29, 101);
+}
+@media(max-width:900px){
+    .play-video{
+        flex-basis:100% ;
+    }
+    .rightsidebar{
+        flex-basis:100% ;
+        margin-left: 10px;
+        
+
+    }
+    .play-container{
+        padding-left:5%;
+    }
+    .vid-description{
+        padding-left: 0;
+
+    }
+    .play-video .play-video-info a{
+        margin-left: -10px;
+
+        width: 3px;
+        height: 3px;
+        
+    
+        
+
+    }
+
+}
+.play-video-info img{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+ .play-video-info p{
+    
+    font-size: 14px;
+    color: #5a5a5a;
+    margin:10px 0;
+    margin-left:-30px;
+    text-align: center;
+    margin-left: -30px;
+}
+
+
